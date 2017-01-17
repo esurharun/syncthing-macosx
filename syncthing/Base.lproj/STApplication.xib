@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="STAppDelegate">
+            <connections>
+                <outlet property="Menu" destination="FYW-KQ-yxY" id="plp-7h-Wj2"/>
+            </connections>
+        </customObject>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <menu id="FYW-KQ-yxY">
+            <items>
+                <menuItem title="Open" toolTip="Open Syncthing Web GUI" id="euz-4I-RQa">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="clickedOpen:" target="Voe-Tx-rLC" id="7Cv-q4-hhD"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Folders" id="Gbh-kn-bEe">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Folders" id="0Tt-4w-4MD">
+                        <items>
+                            <menuItem title="None" id="8nY-KP-Cjq">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                        </items>
+                        <connections>
+                            <outlet property="delegate" destination="Voe-Tx-rLC" id="YxH-QH-bOa"/>
+                        </connections>
+                    </menu>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="t35-2r-DDO"/>
+                <menuItem title="Preferences..." id="lgT-yX-bGZ">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="clickedPreferences:" target="Voe-Tx-rLC" id="nAN-bU-JlB"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="8xd-5E-q58"/>
+                <menuItem title="About" id="dst-j8-d2d">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="clickedAbout:" target="Voe-Tx-rLC" id="p8O-aU-oe3"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="ghy-2s-RVl"/>
+                <menuItem title="Quit Syncthing" id="1wN-cb-7w4">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="clickedQuit:" target="Voe-Tx-rLC" id="Y11-Nd-yq9"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="400" y="224"/>
+        </menu>
+        <menu title="Main Menu" systemMenu="main" id="LRK-4Q-J2a">
+            <items>
+                <menuItem title="Syncthing" id="ViC-de-Xi1">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Syncthing" systemMenu="apple" id="O1r-v6-dVJ">
+                        <items>
+                            <menuItem title="Close window" keyEquivalent="w" id="htF-y1-dkl">
+                                <connections>
+                                    <action selector="performClose:" target="-1" id="wl7-Zc-dFu"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Quit application" keyEquivalent="q" id="42h-qg-75M">
+                                <connections>
+                                    <action selector="terminate:" target="-1" id="11j-7w-23u"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Edit" id="kcv-HR-0Z7">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Edit" id="2Sz-Yy-Gf1">
+                        <items>
+                            <menuItem title="Copy" keyEquivalent="c" id="Bfs-Xu-jSn">
+                                <connections>
+                                    <action selector="copy:" target="-1" id="C5c-ni-Zlw"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Paste" keyEquivalent="v" id="2Oi-Wh-Kfk">
+                                <connections>
+                                    <action selector="paste:" target="-1" id="gQF-t7-uLj"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+            </items>
+        </menu>
+        <customObject id="LNQ-zz-nO6" customClass="SUUpdater"/>
+        <menuItem title="Menu" id="I8M-Pf-BKw">
+            <modifierMask key="keyEquivalentModifierMask"/>
+            <menu key="submenu" title="Menu" id="rlz-0G-Jeh">
+                <items>
+                    <menuItem title="Item" id="Y9X-vm-pic">
+                        <modifierMask key="keyEquivalentModifierMask"/>
+                    </menuItem>
+                </items>
+            </menu>
+        </menuItem>
+    </objects>
+</document>
